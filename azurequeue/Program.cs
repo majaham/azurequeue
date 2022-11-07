@@ -27,7 +27,7 @@
             foreach (QueueMessage message in queue.ReceiveMessages(maxMessages: 10)?.Value)
             {
                 // "Process" the message
-                System.Console.WriteLine($"Message: {message.Body}");
+                System.Console.WriteLine($"Message on queue: {message.Body}");
                 
                 // Let the service know we're finished with the message and
                 // it can be safely deleted.
